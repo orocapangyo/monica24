@@ -19,6 +19,19 @@
 >2) 로봇운영체제 ROS 2 특강
 >
 > -study : 개인 스터디 폴더로 스터디 폴더 안에 참여자별 닉네임 폴더를 만들고, 주차별 정리하여 문서를 push한다.
+>
+> -arduino : 아두이노 코드
+>
+> -micro-ros-agent : 마이크로 ROS 에이전트 코드 -> 외부 깃 레포지토리를 사용한다.
+>
+> https://github.com/micro-ROS/micro_ros_setup.git
+>
+>
+
+
+
+
+
 
 
 
