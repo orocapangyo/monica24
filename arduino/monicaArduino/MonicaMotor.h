@@ -3,9 +3,12 @@
 
 #include <PID_v1.h>
 
-#define MOTOR_60RPM 1
-#define MOTOR_178RPM 2
-#define MOTOR_TYPE MOTOR_60RPM
+#ifndef MOTOR_TYPE
+    #define MOTOR_60RPM 1
+    #define MOTOR_178RPM 2
+    #define MOTOR_TYPE MOTOR_60RPM
+#endif
+
 
 #if MOTOR_TYPE == MOTOR_60RPM
 #define K_P 1153.0
