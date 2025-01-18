@@ -28,6 +28,14 @@
 >
 >
 
+## Tested System information
+Raspberry Pi 4B/5 + RPLidar + ESP32 + DC motor with Encoder
+
+Ubuntu 22.04 / ROS2 Humble
+
+Ubuntu 24.04 / ROS2 Jazzy
+
+
 
 
 
