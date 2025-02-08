@@ -49,7 +49,7 @@ MonicaMotor motor_right(ENC_IN_RIGHT_A, ENC_IN_RIGHT_B, BIN1, BIN2, STBY, ENB, E
 MotorModule motor_module(&motor_left, &motor_right);
 
 MonicaMPU6050 mpu(MPU_INT);
-MonicaMPUModule mpu_module(mpu);
+MonicaMPUModule mpu_module(&mpu);
 
 MonicaRosComm ros_comm(&motor_left, &motor_right, &song, &display, &led, &mpu);
 

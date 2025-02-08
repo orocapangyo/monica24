@@ -9,6 +9,16 @@
 #include "Wire.h"
 #endif
 
+#define DEBUG 1
+#if (DEBUG == 1)
+#define DEBUG_PRINT(x) Serial2.print(x)
+#define DEBUG_PRINTY(x, y) Serial2.print(x, y)
+#define DEBUG_PRINTLN(x) Serial2.println(x)
+#else
+#define DEBUG_PRINT(x)
+#define DEBUG_PRINTLN(x)
+#endif
+
 MonicaMPU6050::MonicaMPU6050(uint8_t mpu_pin)
 {
   mpu_pin_ = mpu_pin;
