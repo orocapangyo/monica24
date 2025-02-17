@@ -120,7 +120,9 @@ class ImuNode(Node):
         t.header.stamp = self.get_clock().now().to_msg()
 
         # imu data publish or null
-        t.transform.rotation =  self.imu_msg.orientation
+        # don't set transform.rotation to imu_msg.orientation 
+        # because imu_msg.header.frame_id = 'imu_link' (show 90 line)
+        #t.transform.rotation =  self.imu_msg.orientation
         self.br.sendTransform(t)
 
 def main(args=None):
