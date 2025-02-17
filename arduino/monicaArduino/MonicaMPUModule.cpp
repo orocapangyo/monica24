@@ -15,7 +15,7 @@ MonicaMPUModule::~MonicaMPUModule()
 
 void MonicaMPUModule::initialize()
 {
-  if (mpu_ != nullptr) 
+  if (mpu_ == nullptr) 
   {
     return;
   }
@@ -54,6 +54,6 @@ void MonicaMPUModule::mpu_dmp_ready_interrupt()
 {
     if (mpu_ != nullptr)
     {
-        mpu_->set_dmp_ready(true);
+        mpu_->set_mpu_interrupt(true);
     }
 }
