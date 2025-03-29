@@ -1,0 +1,64 @@
+menu "micro-ROS example-app settings"
+
+    config MICRO_ROS_APP_STACK
+        int "Stack the micro-ROS app (Bytes)"
+        default 16000
+        help
+        Stack size in Bytes of the micro-ROS app
+
+    config MICRO_ROS_APP_TASK_PRIO
+        int "Priority of the micro-ROS app"
+        default 5
+        help
+        Priority of micro-ros task higher value means higher priority
+
+
+    config MICRO_ROS_DOMAIN_ID
+        int "Ros domain id of the micro-ROS"
+        default 20
+        range 0 101
+        help
+        To avoid interference between different groups of computers running ROS 2 on the same network, set a different domain ID value for each computer group.
+        
+    config MICRO_ROS_NAMESPACE
+        string "Ros namespace of the micro-ROS"
+        default ""
+        help
+        The ROS node namespace
+
+    config MICRO_ROS_UART_NUM
+        int "ESP32 UART NUM of the micro-ROS"
+        default 2
+        help
+        The Ros uart number
+
+    config MICRO_ROS_UART_BAUD
+        int "ESP32 UART BAUD of the micro-ROS"
+        default 921600
+        help
+        The Ros uart baudrate
+
+    config MICRO_ROS_UART_TXD
+        int "UART TXD of the micro-ROS"
+        default 43
+        help
+        The Ros uart tx pin number
+    
+    config MICRO_ROS_UART_RXD
+        int "UART RXD of the micro-ROS"
+        default 44
+        help
+        The Ros uart rx pin number
+    
+    config MICRO_ROS_UART_RTS
+        int "UART RTS of the micro-ROS"
+        default -1
+        help
+        The Ros uart rts pin number
+    
+    config MICRO_ROS_UART_CTS
+        int "UART CTS of the micro-ROS"
+        default -1
+        help
+        The Ros uart cts pin number
+endmenu
