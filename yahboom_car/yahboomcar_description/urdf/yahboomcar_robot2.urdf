@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="yahboomcar">
+  <link
+    name="robot2/base_footprint" />
+  <link
+    name="robot2/base_link">
+    <inertial>
+      <origin
+        xyz="0.00747327885898614 -0.000703137401396085 0.00844632750789007"
+        rpy="0 0 0" />
+      <mass
+        value="0.472828691870721" />
+      <inertia
+        ixx="0.00023735992797554"
+        ixy="1.96687462104139E-07"
+        ixz="4.09403791310172E-05"
+        iyy="0.000480258948998206"
+        iyz="2.77544074265144E-07"
+        izz="0.000585619745886075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="robot2/base_joint" type="fixed">
+        <parent link="robot2/base_footprint"/>
+        <child link="robot2/base_link"/>
+        <origin xyz="0.0 0.0 0.0815" rpy="0 0 0"/>
+  </joint>
+  <link
+    name="robot2/left_front_wheel">
+    <inertial>
+      <origin
+        xyz="9.51309601676664E-07 -0.00750819025110039 2.18379392255552E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0500162120573925" />
+      <inertia
+        ixx="1.40864768085935E-05"
+        ixy="1.26664379700422E-09"
+        ixz="7.32505207064377E-11"
+        iyy="2.37248611853105E-05"
+        iyz="-8.29718123821318E-10"
+        izz="1.40860255663684E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/left_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.309803921568627 0.309803921568627 0.309803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/left_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot2/left_front_joint"
+    type="continuous">
+    <origin
+      xyz="0.06 0.08361 -0.03295"
+      rpy="0 0 0" />
+    <parent
+      link="robot2/base_link" />
+    <child
+      link="robot2/left_front_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot2/left_back_wheel">
+    <inertial>
+      <origin
+        xyz="2.16943072321729E-06 -0.00750818642922751 -7.84233932168976E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0500046612532973" />
+      <inertia
+        ixx="1.40831669483232E-05"
+        ixy="1.39729199262047E-09"
+        ixz="1.64939876121511E-10"
+        iyy="2.37212144800203E-05"
+        iyz="1.20398545590494E-09"
+        izz="1.40831639757783E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/left_back_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.309803921568627 0.309803921568627 0.309803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/left_back_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot2/left_back_joint"
+    type="continuous">
+    <origin
+      xyz="-0.06 0.083967 -0.03295"
+      rpy="0 0 0" />
+    <parent
+      link="robot2/base_link" />
+    <child
+      link="robot2/left_back_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot2/right_front_wheel">
+    <inertial>
+      <origin
+        xyz="1.39763584144914E-06 0.00750819651285384 1.80940603984603E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0500047416034941" />
+      <inertia
+        ixx="1.40833480740863E-05"
+        ixy="-1.76138672813374E-09"
+        ixz="-3.22549915470603E-11"
+        iyy="2.37212903005222E-05"
+        iyz="3.14012077850559E-10"
+        izz="1.40830865017032E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/right_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.309803921568627 0.309803921568627 0.309803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/right_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot2/right_front_joint"
+    type="continuous">
+    <origin
+      xyz="0.06 -0.083747 -0.03295"
+      rpy="0 0 0" />
+    <parent
+      link="robot2/base_link" />
+    <child
+      link="robot2/right_front_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot2/right_back_wheel">
+    <inertial>
+      <origin
+        xyz="-9.55851960818266E-07 0.00750819824863867 2.17080393899449E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0500150312671666" />
+      <inertia
+        ixx="1.40860871898844E-05"
+        ixy="1.15449149953798E-09"
+        ixz="6.61374857841594E-11"
+        iyy="2.37245707946249E-05"
+        iyz="6.4920640199731E-10"
+        izz="1.40857967352272E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/right_back_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.309803921568627 0.309803921568627 0.309803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/right_back_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot2/right_back_joint"
+    type="continuous">
+    <origin
+      xyz="-0.06 -0.08358 -0.03295"
+      rpy="0 0 0" />
+    <parent
+      link="robot2/base_link" />
+    <child
+      link="robot2/right_back_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot2/camera_link">
+    <inertial>
+      <origin
+        xyz="0.0120062883869545 1.41307787423189E-12 -0.0042347859353245"
+        rpy="0 0 0" />
+      <mass
+        value="0.00750684648912333" />
+      <inertia
+        ixx="1.51127145045957E-06"
+        ixy="-2.71539569708406E-14"
+        ixz="-2.95702098156892E-08"
+        iyy="3.81441254432382E-07"
+        iyz="-1.22107655491651E-13"
+        izz="1.3927359120295E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot2/camera_joint"
+    type="revolute">
+    <origin
+      xyz="0.10597 0 0.029874"
+      rpy="0 0 0" />
+    <parent
+      link="robot2/base_link" />
+    <child
+      link="robot2/camera_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.4"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot2/camera2_link">
+    <inertial>
+      <origin
+        xyz="-0.00890326257047377 -0.0181075454483547 0.0183349632472757"
+        rpy="0 0 0" />
+      <mass
+        value="0.173412271704595" />
+      <inertia
+        ixx="0.000376500545687347"
+        ixy="2.2465054742241E-08"
+        ixz="7.46582088614442E-08"
+        iyy="3.27628693541372E-05"
+        iyz="-5.06722292463496E-12"
+        izz="0.000382974148366682" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/camera2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0823529411764706 0.0823529411764706 0.0823529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/camera2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot2/camera2_link"
+    type="revolute">
+    <origin
+      xyz="0.092092 0.020691 0.061267"
+      rpy="0 0 0" />
+    <parent
+      link="robot2/base_link" />
+    <child
+      link="robot2/camera2_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot2/laser">
+    <inertial>
+      <origin
+        xyz="2.58655077059347E-05 9.87213808632172E-05 -0.0175251741349158"
+        rpy="0 0 0" />
+      <mass
+        value="0.0384696767042416" />
+      <inertia
+        ixx="7.04823646497064E-06"
+        ixy="-1.60337109920922E-07"
+        ixz="9.84412023285342E-09"
+        iyy="7.10632359919618E-06"
+        iyz="3.98837665675289E-08"
+        izz="7.61196038394082E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.196078431372549 0.196078431372549 0.196078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot2/lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0019517 0.00040736 0.12059"
+      rpy="0 0 0" />
+    <parent
+      link="robot2/base_link" />
+    <child
+      link="robot2/laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="robot2/imu_link">
+    <inertial>
+      <origin
+        xyz="-0.022012348814566 -0.014787288572475 0.00189847204885884"
+        rpy="0 0 0" />
+      <mass
+        value="0.0359997241016587" />
+      <inertia
+        ixx="5.07306168807687E-06"
+        ixy="-1.17177214930425E-07"
+        ixz="-1.17901089615287E-07"
+        iyy="1.27151707942821E-05"
+        iyz="3.16261224112506E-07"
+        izz="8.57151361697302E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yahboomcar_description/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot2/imu_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00080703 0.0418 0.040805"
+      rpy="0 0 0" />
+    <parent
+      link="robot2/base_link" />
+    <child
+      link="robot2/imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

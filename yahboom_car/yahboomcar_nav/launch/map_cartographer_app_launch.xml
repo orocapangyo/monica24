@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find-pkg-share rosbridge_server)/launch/rosbridge_websocket_launch.xml"/>
+    <node name="laserscan_to_point_publisher" pkg="laserscan_to_point_publisher" exec="laserscan_to_point_publisher"/>
+    <include file="$(find-pkg-share yahboomcar_nav)/launch/map_cartographer_launch.py"/>
+    <include file="$(find-pkg-share robot_pose_publisher_ros2)/launch/robot_pose_publisher_launch.py"/>
+    <include file="$(find-pkg-share yahboom_app_save_map)/yahboom_app_save_map.launch.py"/>
+</launch>
