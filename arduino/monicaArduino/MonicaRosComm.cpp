@@ -81,7 +81,10 @@ void MonicaRosComm::Initialize()
 {
   // ROS Setup
   DEBUG_PRINTLN("ROS Starts");
-  set_microros_transports();
+
+  set_microros_wifi_transports("iptime_test", "12345678", "192.168.1.14", 8888);
+  //set_microros_transports();
+
 
   delay(2000);
 
