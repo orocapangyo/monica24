@@ -14,6 +14,13 @@
 - Navigation은 SLAM의 결과를 사용함:
   - 이미 SLAM으로 생성된 지도와 위치 정보를 바탕으로 로봇이 어떻게 움직일지를 결정하는 게 Navigation입니다.
  
+## 기타 용어 정리
+- tf: 시간에 따라 변하는 좌표계들 간의 위치 및 방향 관계(변환)를 관리하고, 로봇 시스템 전체에서 통합된 공간 정보를 제공하는 프레임워크
+- odometry: Odometry는 센서 데이터를 바탕으로 로봇의 이동 거리와 방향을 추정하여 위치(자세, pose)를 계산하는 기법
+- MCU: MCU는 센서 제어, 모터 구동 등 임베디드 시스템에서 사용하는 작고 저전력의 통합 컴퓨터 칩
+- IMU: IMU는 가속도계 + 자이로스코프( + 자력계)를 조합해 기기의 움직임과 방향 변화를 측정하는 센서
+- Gazebo: Gazebo는 로봇과 센서를 가상 3D 환경에서 테스트하고, ROS와 연동하여 실제처럼 움직이게 할 수 있는 시뮬레이터
+ 
 ## monicar2로 SLAM 하는 법
 ### 1. 라즈베리파이에서 ekfPose 실행
 ```shell
@@ -58,4 +65,6 @@ ros2 launch monicar2_cartographer cartographer_rviz.launch.py
   - **rviz2 노드 실행**: 해당 RViz 구성으로 GUI 실행, 실시간 지도, scan, 위치 확인 가능
 
 ![Screenshot from 2025-05-23 22-03-42](https://github.com/user-attachments/assets/04d78ca6-6b1d-4fdd-a7f7-64d45c366c9d)
+
+
 
