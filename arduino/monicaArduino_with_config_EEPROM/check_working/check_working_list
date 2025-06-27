@@ -1,0 +1,10 @@
+1. Motor    	| OK
+2. Song     	| OK
+3. Display  	| 전선 연결해야함.
+4. Led      	| OK
+5. MPU6050  	| OK
+6. ROS Agent	| OK
+7. ROS wifi 	| OK
+7. ROS serial	| OK
+8. config comm	| OK
+9. EEPROM	| OK
