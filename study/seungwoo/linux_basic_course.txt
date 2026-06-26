@@ -1,0 +1,48 @@
+linux basic course
+[1. 리눅스 기본 및 개발 환경 구축]
+1. Introduction to Linux system (리눅스 시스템 소개)
+- 리눅스의 특징과 배포판 소개. ROS에서 표준처럼 Ubuntu 사용
+2. Ubuntu file system (우분투 파일 시스템)
+- 리눅스의 독특한 디렉토리 구조(Root /, /bin, /etc, /home 등) 이해
+3. Ubuntu common commands (우분투 자주 쓰는 명령어)
+- ls(목록), cd(이동), pwd(현재 위치), cp(복사), mv(이동/이름변경), rm(삭제) 등 필수 명령어
+4. Ubuntu common editors (우분투 주요 에디터)
+- 터미널 창 안에서 코드를 수정할 때 쓰는 nano나 vim 에디터 사용법
+5. Ubuntu software operation center/commands (우분투 소프트웨어 관리)
+- 패키지 관리 도구인 apt나 apt-get을 이용해 필요한 프로그램/라이브러리를 설치, 업데이트, 삭제하는 방법.
+6. Virtual machine installation (가상 머신 설치)
+- Windows 환경의 PC에서 리눅스를 연습하거나 개발하기 위해 가상 머신(VirtualBox, VMware 등)을 설치하고 우분투 환경을 세팅하는 방법
+
+[2. 원격 로봇 제어 및 파일 전송]
+7. SSH remote control (SSH 원격 제어)
+- 보안 셸(Secure Shell)을 이용해 PC의 터미널에서 로봇(라즈베리 파이 등)의 터미널로 원격 접속하여 명령을 내리는 방법
+8. VNC remote control (VNC 원격 제어)
+- 로봇의 GUI(화면) 환경을 내 PC로 원격으로 보면서 마우스와 키보드로 제어하는 GUI 기반 원격 제어
+9. Transfer files remotely (원격 파일 전송)
+- SFTP나 SCP 프로토콜을 이용해 개발 PC에서 작성한 코드나 맵 파일을 원격에 있는 로봇으로 전송하는 방법
+
+[3. 하드웨어 연동 및 네트워크 설정]
+10. Driver library and communication (드라이버 라이브러리 및 통신)
+- 로봇 하드웨어 및 외부 모듈 제어를 위한 라이브러리 설치와 기본 통신 설정
+11. Static IP and hotspot mode (고정 IP 및 핫스팟 모드)
+- 로봇과 PC가 매번 IP가 바뀌면 원격 접속이 끊기므로 IP를 고정(Static)하거나, 와이파이가 없는 야외 환경에서 로봇 자체를 핫스팟으로 만드는 방법
+12. Bind device ID (디바이스 ID 고정)
+- USB로 라이다(LiDAR)나 카메라를 연결할 때 포트 경로(예: /dev/ttyUSB0)가 꼬이지 않도록 udev rule 등을 이용해 고유한 장치 ID를 부여하고 고정하는 방법
+13. Capacity expansion and resizing (용량 확장 및 재조정)
+- 라즈베리 파이에 OS 이미지를 구우면 SD 카드의 전체 용량을 못 쓰는 경우가 많은데, 파티션을 확장하여 저장 공간을 온전히 확보하는 방법
+
+[4. 시스템 최적화 및 유지보수]
+14. Update system software sources (시스템 소프트웨어 소스 업데이트)
+- 패키지 다운로드 속도를 높이기 위해 다운로드 서버(미러 서버)를 한국 서버로 변경하고 업데이트하는 방법
+15. Set root user password (Root 사용자 비밀번호 설정)
+- 시스템 최고 관리자(Root) 계정을 활성화하고 보안 비밀번호를 설정하는 방법
+16. sudo free password (sudo 비밀번호 생략 설정)
+- 매번 sudo 명령어를 쓸 때 비밀번호를 치면 자동화 스크립트가 멈추므로, 특정 명령이나 사용자에 대해 비밀번호 입력을 면제해 주는 설정
+17. Connect to WiFi network (와이파이 네트워크 연결)
+- 화면(GUI)이 없는 환경에서 오직 터미널 명령어(nmcli 등)로 로봇을 와이파이에 연결하는 방법
+18. View system version (시스템 버전 확인)
+- OS 버전, 커널 버전을 확인하는 방법. ROS를 설치할 때 버전 호환성이 매우 중요하므로 자주 쓰임
+19. Customized service management (사용자 정의 서비스 관리)
+- 로봇 전원을 켜자마자 로봇 제어 프로그램(ROS 노드)이 자동으로 실행되도록 systemd 서비스로 등록하고 관리하는 방법
+20. Back up system image (시스템 이미지 백업)
+- 열심히 세팅해 둔 로봇의 환경을 통째로 .img 파일로 백업하여, 시스템이 망가졌을 때 원상복구하거나 다른 로봇에 똑같이 복제하는 방법
